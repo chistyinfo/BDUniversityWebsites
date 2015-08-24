@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
+
     <permission
         android:name="oaktroop.bduniversity.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
@@ -74,7 +75,7 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />
 
-
+    <activity android:name="aoktroop.bduniversity.activity.WebActivity"></activity>
 
 
 
