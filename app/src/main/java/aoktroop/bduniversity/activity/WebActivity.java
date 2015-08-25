@@ -1,6 +1,7 @@
 package aoktroop.bduniversity.activity;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -26,14 +27,36 @@ public class WebActivity extends AppCompatActivity {
         forward = (Button) findViewById(R.id.forwardButton);
 
         webView=(WebView)findViewById(R.id.webView);
-        webView.setWebViewClient(new MyBrowser());
 
-        String url = "http://uva.onlinejudge.org/";
 
-        webView.getSettings().setLoadsImagesAutomatically(true);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-        webView.loadUrl(url);
+
+
+
+        Bundle extras = getIntent().getExtras();
+        String  url;
+        if (extras != null) {
+            url = extras.getString("url");
+
+
+
+
+
+
+
+            // this webview intialized by univirese not only for this class to use back optin properly
+
+//            webView.setWebViewClient(new WebViewClient());
+//            webView.getSettings().setJavaScriptEnabled(true);
+//            webView.loadUrl(url);
+
+            webView.setWebViewClient(new MyBrowser());
+            webView.getSettings().setLoadsImagesAutomatically(true);
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+            webView.loadUrl(url);
+        }
+
+
 
     }
 
