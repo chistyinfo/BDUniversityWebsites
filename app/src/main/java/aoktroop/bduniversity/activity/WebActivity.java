@@ -2,21 +2,24 @@ package aoktroop.bduniversity.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import oaktroop.bduniversity.R;
 
-public class WebActivity extends AppCompatActivity {
+public class WebActivity extends AppCompatActivity{
 
     private WebView webView;
     private Button back;
     private Button forward;
+    private TextView txtUnititle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,28 +29,25 @@ public class WebActivity extends AppCompatActivity {
         back = (Button) findViewById(R.id.backButton);
         forward = (Button) findViewById(R.id.forwardButton);
 
-        webView=(WebView)findViewById(R.id.webView);
 
+
+        webView=(WebView)findViewById(R.id.webView);
+   txtUnititle=(TextView)findViewById(R.id.title_uniName);
 
 
 
 
         Bundle extras = getIntent().getExtras();
-        String  url;
+        String  uniName,url;
         if (extras != null) {
+            uniName= extras.getString("uniName");
             url = extras.getString("url");
 
+            txtUnititle.setText(uniName);
 
 
 
 
-
-
-            // this webview intialized by univirese not only for this class to use back optin properly
-
-//            webView.setWebViewClient(new WebViewClient());
-//            webView.getSettings().setJavaScriptEnabled(true);
-//            webView.loadUrl(url);
 
             webView.setWebViewClient(new MyBrowser());
             webView.getSettings().setLoadsImagesAutomatically(true);

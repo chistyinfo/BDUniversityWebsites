@@ -23,19 +23,15 @@ public class PublicFragment extends Fragment {
    private ListView listViewUni;
     private Context context;
 
-    String[] itemname ={
-            "NorthSouth University",
-            "Indepent University",
+    String[] uniName ={
+            "University of Dhaka",
+            "Jahangirnagar University",
 
     };
-//
-//    Integer[] imgid= {
-//            R.drawable.pic1,
-//            R.drawable.pic2,
-//    };
 
-    String[] urlStrArray={"http://www.northsouth.edu/",
-            "http://www.iub.edu.bd/",
+
+    String[] urlStrArray={"http://www.du.ac.bd/",
+            "http://www.juniv.edu/",
 
     };
     public PublicFragment() {
@@ -53,7 +49,7 @@ public class PublicFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_public, container, false);
         CustomListAdapter adapter = new CustomListAdapter( getActivity()
-                ,itemname,null);
+                ,uniName,null);
         listViewUni=(ListView)rootView.findViewById(R.id.list_view_univer);
         listViewUni.setAdapter(adapter);
 
@@ -63,9 +59,11 @@ public class PublicFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                String Slecteditem = itemname[+position];
+
                 Intent intent = new Intent(getActivity(), WebActivity.class);
+                intent.putExtra("uniName", uniName[position]);
                 intent.putExtra("url", urlStrArray[position]);
+
                 startActivity(intent);
 
 
