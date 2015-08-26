@@ -20,14 +20,14 @@ public class NationalFragment extends Fragment {
     private Context context;
 
     String[] uniName ={
-            "University of Dhaka",
-            "Jahangirnagar University",
+            "Bangladesh National University",
+            "Bangladesh Open University",
 
     };
 
 
-    String[] urlStrArray={"http://www.du.ac.bd/",
-            "http://www.juniv.edu/",
+    String[] urlStrArray={"http://www.nu.edu.bd/",
+            "http://www.bou.edu.bd/",
 
     };
 
