@@ -4,13 +4,18 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import oaktroop.bduniversity.R;
 
@@ -20,11 +25,16 @@ public class WebActivity extends AppCompatActivity{
     private Button back;
     private Button forward;
     private TextView txtUnititle;
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.002F);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webn);
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         back = (Button) findViewById(R.id.backButton);
         forward = (Button) findViewById(R.id.forwardButton);
@@ -32,7 +42,7 @@ public class WebActivity extends AppCompatActivity{
 
 
         webView=(WebView)findViewById(R.id.webView);
-   txtUnititle=(TextView)findViewById(R.id.title_uniName);
+        txtUnititle=(TextView)findViewById(R.id.title_uniName);
 
 
 
@@ -44,6 +54,7 @@ public class WebActivity extends AppCompatActivity{
             url = extras.getString("url");
 
             txtUnititle.setText(uniName);
+            txtUnititle.setMovementMethod(new ScrollingMovementMethod());
 
 
 
@@ -80,18 +91,21 @@ public class WebActivity extends AppCompatActivity{
     }
 
     public void backAction(View view){
+        view.startAnimation(buttonClick);
+
         if(webView.canGoBack())
         {
             webView.goBack();
         }
         else{
             Toast.makeText(getApplicationContext(), "No page to go Back!", Toast.LENGTH_SHORT).show();
-//            System.out.println("1. Else!!!");
         }
 
     }
 
     public void forwardAction(View view){
+        view.startAnimation(buttonClick);
+
         if(webView.canGoForward())
         {
             webView.goForward();

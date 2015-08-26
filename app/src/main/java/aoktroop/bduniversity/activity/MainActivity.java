@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
 
         FloatingActionButton fabBtn = (FloatingActionButton) findViewById(R.id.fabBtn);
+
         fabBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
