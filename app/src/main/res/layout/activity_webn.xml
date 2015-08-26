@@ -1,89 +1,75 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:weightSum="5"
-    tools:context=".MainActivity">
+    tools:context=".WebActivity">
 
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight=".4"
-        android:orientation="horizontal"
-        android:weightSum="5"
-        android:gravity="center"
-        android:background="@color/colorPrimaryDark"
-        android:id="@+id/linearLayout">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/backButton"
-            android:layout_weight=".75"
-            android:background="@drawable/back"
-            android:onClick="backAction"/>
 
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="uniName"
-            android:layout_weight="3.5"
             android:textSize="18sp"
             android:gravity="center"
             android:id="@+id/title_uniName"
-            android:layout_toRightOf="@+id/fabBtn"
-            android:textColor="@color/windowBackground"
+            android:textColor="@color/colorPrimaryDark"
             android:maxLines = "2"
             android:scrollbars = "horizontal"
             />
-
-        <Button
-        android:layout_width="0dp"
-        android:layout_weight=".75"
-        android:layout_height="wrap_content"
-        android:id="@+id/forwardButton"
-        android:background="@drawable/forward"
-        android:onClick="forwardAction"/>
-
-
-    </LinearLayout>
 
 
 
     <WebView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4.1"
+        android:layout_height="match_parent"
         android:id="@+id/webView"
-        android:layout_below="@+id/linearLayout">
-
-    </WebView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight=".5"
-        android:gravity="center">
-
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            ads:adSize="BANNER"
-            ads:adUnitId="@string/banner_ad_unit_id">
-        </com.google.android.gms.ads.AdView>
-
-    </LinearLayout>
+        android:layout_below="@+id/title_uniName" />
 
 
 
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/forward"
+        app:backgroundTint="@android:color/holo_green_dark"
+        app:fabSize="normal"
+        android:onClick="backAction"
+        android:layout_alignBottom="@+id/webView"
+        android:layout_alignRight="@+id/webView"/>
 
 
-</LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/forwardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:src="@drawable/backward"
+        app:backgroundTint="@android:color/holo_green_dark"
+        app:fabSize="normal"
+        android:onClick="forwardAction"
+        android:layout_alignBottom="@+id/webView"
+        android:layout_alignLeft="@+id/webView" />
+
+
+
+
+
+</RelativeLayout>
