@@ -29,7 +29,7 @@ public class NationalFragment extends Fragment {
             "Carmichael College, Rangpur",
             "Chittagong College",
             "Comilla Victoria Government College",
-            "Debendra College",
+            "Debendra College, Manikganj",
             "Dhaka City College",
             "Dhaka College",
             "Dhaka Commerce College",

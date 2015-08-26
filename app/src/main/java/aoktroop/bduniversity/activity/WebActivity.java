@@ -95,7 +95,7 @@ public class WebActivity extends AppCompatActivity{
             webView.goBack();
         }
         else{
-            Toast.makeText(getApplicationContext(), "No page to go Back!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "No web page to go Back!", Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -109,7 +109,7 @@ public class WebActivity extends AppCompatActivity{
         }
         else{
 //            System.out.println("2. Else!!!");
-            Toast.makeText(getApplicationContext(), "No page to go Forward!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "No web page to go Forward!", Toast.LENGTH_SHORT).show();
         }
 
     }

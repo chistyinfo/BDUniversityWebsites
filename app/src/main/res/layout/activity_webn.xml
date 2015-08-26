@@ -5,23 +5,23 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:weightSum="5"
     tools:context=".WebActivity">
 
 
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="uniName"
-            android:textSize="18sp"
-            android:gravity="center"
-            android:id="@+id/title_uniName"
-            android:textColor="@color/colorPrimaryDark"
-            android:maxLines = "2"
-            android:scrollbars = "horizontal"
-            />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="uniName"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:id="@+id/title_uniName"
+        android:textColor="@color/textColorPrimary"
+        android:maxLines = "4"
+        android:scrollbars = "horizontal"
+        android:background="@color/colorPrimary"
+        />
 
 
 
@@ -29,7 +29,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/webView"
-        android:layout_below="@+id/title_uniName" />
+        android:layout_below="@+id/title_uniName"
+        android:layout_above="@+id/adView1" />
 
 
 
@@ -51,9 +52,10 @@
         android:src="@drawable/forward"
         app:backgroundTint="@android:color/holo_green_dark"
         app:fabSize="normal"
-        android:onClick="backAction"
-        android:layout_alignBottom="@+id/webView"
-        android:layout_alignRight="@+id/webView"/>
+        android:onClick="forwardAction"
+        android:layout_alignBottom="@+id/adView1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
     <android.support.design.widget.FloatingActionButton
@@ -64,9 +66,10 @@
         android:src="@drawable/backward"
         app:backgroundTint="@android:color/holo_green_dark"
         app:fabSize="normal"
-        android:onClick="forwardAction"
-        android:layout_alignBottom="@+id/webView"
-        android:layout_alignLeft="@+id/webView" />
+        android:onClick="backAction"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 

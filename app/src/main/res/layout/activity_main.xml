@@ -30,19 +30,19 @@
             android:id="@+id/rlLayout"
             android:layout_width="fill_parent"
             android:layout_height="20dp"
-            android:layout_weight="1" />
+            android:layout_weight="0.76" />
 
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fabBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_marginBottom="@dimen/codelab_fab_margin_bottom"
-            android:layout_marginRight="@dimen/codelab_fab_margin_right"
-            android:src="@drawable/ic_plus"
-            app:backgroundTint="@android:color/holo_green_dark"
-            app:fabSize="normal" />
+        <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/fabBtn"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="bottom|right"-->
+            <!--android:layout_marginBottom="@dimen/codelab_fab_margin_bottom"-->
+            <!--android:layout_marginRight="@dimen/codelab_fab_margin_right"-->
+            <!--android:src="@drawable/ic_plus"-->
+            <!--app:backgroundTint="@android:color/holo_green_dark"-->
+            <!--app:fabSize="normal" />-->
 
         <LinearLayout
             android:layout_width="match_parent"
