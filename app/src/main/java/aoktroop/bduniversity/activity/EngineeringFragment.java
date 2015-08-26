@@ -11,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import oaktroop.bduniversity.R;
 
 
@@ -78,6 +81,10 @@ public class EngineeringFragment extends Fragment {
         listViewUni.setAdapter(adapter);
 
 
+        AdView mAdView = (AdView)rootView.findViewById(R.id.adViewEni);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
         listViewUni.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -105,4 +112,7 @@ public class EngineeringFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
     }
+
+
+
 }

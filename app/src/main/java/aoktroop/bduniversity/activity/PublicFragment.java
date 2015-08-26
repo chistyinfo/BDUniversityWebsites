@@ -15,6 +15,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import oaktroop.bduniversity.R;
 
 
@@ -85,7 +88,9 @@ public class PublicFragment extends Fragment {
                 ,uniName,null);
         listViewUni=(ListView)rootView.findViewById(R.id.list_view_univer);
         listViewUni.setAdapter(adapter);
-
+        AdView mAdView = (AdView)rootView.findViewById(R.id.adViewPub);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         listViewUni.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 

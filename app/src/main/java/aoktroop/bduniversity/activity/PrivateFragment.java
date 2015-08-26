@@ -133,7 +133,7 @@ public class PrivateFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_public, container, false);
         CustomListAdapter adapter = new CustomListAdapter( getActivity()
                 ,itemName,null);
-        listViewUni=(ListView)rootView.findViewById(R.id.list_view_univer);
+        listViewUni=(ListView)rootView.findViewById(R.id.list_view_private_university);
         listViewUni.setAdapter(adapter);
 
 

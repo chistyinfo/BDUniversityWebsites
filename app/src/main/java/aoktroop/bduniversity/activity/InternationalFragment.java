@@ -15,7 +15,7 @@ import oaktroop.bduniversity.R;
 
 
 
-public class OthersFragment extends Fragment {
+public class InternationalFragment extends Fragment {
     private ListView listViewUni;
     private Context context;
 
@@ -31,7 +31,7 @@ public class OthersFragment extends Fragment {
 
     };
 
-    public OthersFragment() {
+    public InternationalFragment() {
         // Required empty public constructor
     }
 

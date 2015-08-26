@@ -20,6 +20,8 @@ public class NationalFragment extends Fragment {
     private Context context;
 
     String[] uniName ={
+            "Bangladesh National University",
+            "Bangladesh Open University",
             "Ananda Mohan College",
             "B L College, Khulna",
             "Bangla College",
@@ -55,6 +57,8 @@ public class NationalFragment extends Fragment {
 
 
     String[] urlStrArray={
+            "http://www.nu.edu.bd/",
+            "http://www.bou.edu.bd/",
             "http://www.anandamohangovtcollege.edu.bd/",
             "http://blcollege.edu.bd/",
             "http://sarkaribanglacollege.gov.bd/",
