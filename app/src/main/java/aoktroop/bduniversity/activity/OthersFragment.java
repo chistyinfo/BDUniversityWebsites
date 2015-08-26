@@ -20,14 +20,14 @@ public class OthersFragment extends Fragment {
     private Context context;
 
     String[] uniName ={
-            "University of Dhaka",
-            "Jahangirnagar University",
+            "Islamic University of Technology(IUT)",
+            "Asian University for Women(AUW)",
 
     };
 
 
-    String[] urlStrArray={"http://www.du.ac.bd/",
-            "http://www.juniv.edu/",
+    String[] urlStrArray={"http://www.iutoic-dhaka.edu/",
+            "http://www.asian-university.org/",
 
     };
 

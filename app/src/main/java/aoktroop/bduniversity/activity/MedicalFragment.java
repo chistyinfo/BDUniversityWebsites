@@ -20,14 +20,36 @@ public class MedicalFragment extends Fragment {
     private Context context;
 
     String[] uniName ={
-            "University of Dhaka",
-            "Jahangirnagar University",
+            "Dhaka Medical College",
+            "Sir Salimullah Medical College",
+            "Shaheed Suhrawardy Medical College",
+            "Mymensingh Medical College",
+            "Chittagong Medical College",
+            "Rajshahi Medical College",
+            "MAG Osmani Medical College",
+            "Sher-e-Bangla Medical College",
+            "Rangpur Medical College",
+            "Comilla Medical College",
+            "Shaheed Ziaur Rahman Medical College ",
+            "Dinajpur Medical College",
+            "Cox's Bazar Medical College"
 
     };
 
 
-    String[] urlStrArray={"http://www.du.ac.bd/",
-            "http://www.juniv.edu/",
+    String[] urlStrArray={"http://www.dmc.edu.bd/",
+            "http://www.ssmcbd.com/",
+            "http://www.shsmc.edu.bd/",
+            "http://mmc.gov.bd/",
+            "http://cmc.edu.bd/",
+            "http://www.rmc.ac.bd/",
+            "http://www.magosmanimedical.com/",
+            "http://www.sbmc.edu.bd/",
+            "http://rangpurmedical.webs.com/",
+            "http://www.comc.edu.bd/",
+            "http://www.szmcbd.org/",
+            "http://www.dinajmc.org/",
+            "http://www.coxmc.edu.bd/"
 
     };
 

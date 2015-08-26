@@ -26,12 +26,45 @@ public class PublicFragment extends Fragment {
     String[] uniName ={
             "University of Dhaka",
             "Jahangirnagar University",
+            "University of Rajshahi",
+            "Jagannath University",
+            "University of Chittagong",
+            "Bangladesh Agricultural University",
+            "Sher-e-Bangla Agricultural University",
+            "Khulna University",
+            "Islamic University",
+            "Bangabandhu Sheikh Mujibur Rahman Maritime University",
+            "Jatiya Kabi Kazi Nazrul Islam University",
+            "Comilla University",
+            "Begum Rokeya University",
+            "Bangladesh University of Professionals",
+            "University of Barisal",
+            "Chittagong Veterinary and Animal Sciences University",
+            "Sylhet Agricultural University"
+
 
     };
 
 
-    String[] urlStrArray={"http://www.du.ac.bd/",
+    String[] urlStrArray={
+            "http://www.du.ac.bd/",
             "http://www.juniv.edu/",
+            "http://www.ru.ac.bd/",
+            "http://jnu.ac.bd/",
+            "http://cu.ac.bd",
+            "http://www.bau.edu.bd/",
+            "http://www.sau.edu.bd",
+            "http://ku.ac.bd",
+            "http://iu.ac.bd",
+            "http://www.bsmrmu.edu.bd/",
+            "http://www.jkkniu.edu.bd/",
+            "http://www.cou.ac.bd/",
+            "http://www.brur.ac.bd/",
+            "http://www.bup.edu.bd/",
+            "http://www.barisaluniv.edu.bd/",
+            "http://www.cvasu.ac.bd/",
+            "http://www.sau.ac.bd/"
+
 
     };
     public PublicFragment() {
