@@ -1,17 +1,35 @@
 package aoktroop.bduniversity.activity;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
 import oaktroop.bduniversity.R;
 
 
 
 public class MedicalFragment extends Fragment {
+    private ListView listViewUni;
+    private Context context;
+
+    String[] uniName ={
+            "University of Dhaka",
+            "Jahangirnagar University",
+
+    };
+
+
+    String[] urlStrArray={"http://www.du.ac.bd/",
+            "http://www.juniv.edu/",
+
+    };
 
     public MedicalFragment() {
         // Required empty public constructor
@@ -27,9 +45,27 @@ public class MedicalFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_medical, container, false);
+        CustomListAdapter adapter = new CustomListAdapter( getActivity()
+                ,uniName,null);
+        listViewUni=(ListView)rootView.findViewById(R.id.list_view_medical);
+        listViewUni.setAdapter(adapter);
 
 
-        // Inflate the layout for this fragment
+        listViewUni.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+
+                Intent intent = new Intent(getActivity(), WebActivity.class);
+                intent.putExtra("uniName", uniName[position]);
+                intent.putExtra("url", urlStrArray[position]);
+
+                startActivity(intent);
+
+
+            }
+        });
         return rootView;
     }
 
