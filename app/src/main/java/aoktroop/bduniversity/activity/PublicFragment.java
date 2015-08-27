@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
@@ -25,6 +28,7 @@ import oaktroop.bduniversity.R;
 public class PublicFragment extends Fragment {
    private ListView listViewUni;
     private Context context;
+    private View view;
 
     String[] uniName ={
             "University of Dhaka",
@@ -88,10 +92,11 @@ public class PublicFragment extends Fragment {
                 ,uniName,null);
         listViewUni=(ListView)rootView.findViewById(R.id.list_view_univer);
         listViewUni.setAdapter(adapter);
-        AdView mAdView = (AdView)rootView.findViewById(R.id.adViewPub);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
+//        AdView mAdView = (AdView)rootView.findViewById(R.id.adViewPub);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
+         addVisibile(rootView);
+        view=rootView;
         listViewUni.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -119,5 +124,30 @@ public class PublicFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        addVisibile(view);
+    }
+    private void addVisibile(View view) {
+
+        LinearLayout adLinearLayout=(LinearLayout)view.findViewById(R.id.adLaPub);
+        if(isNetworkAvailable()) {
+            adLinearLayout.setVisibility(View.VISIBLE);
+            AdView mAdView = (AdView)view.findViewById(R.id.adViewPub);
+       AdRequest adRequest = new AdRequest.Builder().build();
+      mAdView.loadAd(adRequest);
+        }
+        else {
+            adLinearLayout.setVisibility(View.GONE);
+        }
+    }
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 }

@@ -3,12 +3,15 @@ package aoktroop.bduniversity.activity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.google.android.gms.ads.AdRequest;
@@ -20,7 +23,9 @@ import oaktroop.bduniversity.R;
 
 public class EngineeringFragment extends Fragment {
     private ListView listViewUni;
+
     private Context context;
+    private View view;
 
     String[] uniName ={
             "Bangabandhu Sheikh Mujibur Rahman Science and Technology University",
@@ -81,9 +86,8 @@ public class EngineeringFragment extends Fragment {
         listViewUni.setAdapter(adapter);
 
 
-        AdView mAdView = (AdView)rootView.findViewById(R.id.adViewEni);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        addVisibile(rootView);
+        view=rootView;
 
         listViewUni.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -106,6 +110,7 @@ public class EngineeringFragment extends Fragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
+        context=activity;
     }
 
     @Override
@@ -113,6 +118,29 @@ public class EngineeringFragment extends Fragment {
         super.onDetach();
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        addVisibile(view);
+    }
+    private void addVisibile(View view) {
 
+        LinearLayout adLinearLayout=(LinearLayout)view.findViewById(R.id.adEni);
+        if(isNetworkAvailable()) {
+            adLinearLayout.setVisibility(View.VISIBLE);
+            AdView mAdView = (AdView)view.findViewById(R.id.adViewEni);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+        }
+        else {
+            adLinearLayout.setVisibility(View.GONE);
+        }
+    }
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
 
 }

@@ -36,7 +36,7 @@
 android:layout_width="match_parent"
 android:layout_height="wrap_content"
 
-android:id="@+id/adEni"
+android:id="@+id/adLaPub"
 android:gravity="center">
 <com.google.android.gms.ads.AdView
     android:id="@+id/adViewPub"
