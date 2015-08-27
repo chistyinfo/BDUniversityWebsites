@@ -1,5 +1,6 @@
 package aoktroop.bduniversity.activity;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +25,7 @@ public class WebActivity extends AppCompatActivity{
     private TextView txtUnititle;
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.002F);
     private FloatingActionButton backButton,forwardButton;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,24 +40,18 @@ public class WebActivity extends AppCompatActivity{
         FloatingActionButton forwardButton = (FloatingActionButton) findViewById(R.id.forwardButton);
 
 
-
-        webView=(WebView)findViewById(R.id.webView);
-        txtUnititle=(TextView)findViewById(R.id.title_uniName);
-
-
+        webView = (WebView) findViewById(R.id.webView);
+        txtUnititle = (TextView) findViewById(R.id.title_uniName);
 
 
         Bundle extras = getIntent().getExtras();
-        String  uniName,url;
+        String uniName, url;
         if (extras != null) {
-            uniName= extras.getString("uniName");
+            uniName = extras.getString("uniName");
             url = extras.getString("url");
 
             txtUnititle.setText(uniName);
             txtUnititle.setMovementMethod(new ScrollingMovementMethod());
-
-
-
 
 
             webView.setWebViewClient(new MyBrowser());
@@ -63,10 +60,35 @@ public class WebActivity extends AppCompatActivity{
             webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
             webView.loadUrl(url);
         }
-
-
-
     }
+        //for progressbar
+        public class myWebClient extends WebViewClient
+        {
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                // TODO Auto-generated method stub
+                super.onPageStarted(view, url, favicon);
+            }
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                // TODO Auto-generated method stub
+
+                view.loadUrl(url);
+                return true;
+
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                // TODO Auto-generated method stub
+                super.onPageFinished(view, url);
+
+                progressBar.setVisibility(View.GONE);
+            }
+        }
+
+
 
     @Override
     public boolean onKeyDown (int keyCode, KeyEvent event) {
