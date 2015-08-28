@@ -1,6 +1,9 @@
 package aoktroop.bduniversity.activity;
 
+import android.content.Context;
 import android.graphics.Bitmap;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -53,12 +56,12 @@ public class WebActivity extends AppCompatActivity{
             txtUnititle.setText(uniName);
             txtUnititle.setMovementMethod(new ScrollingMovementMethod());
 
-
             webView.setWebViewClient(new MyBrowser());
             webView.getSettings().setLoadsImagesAutomatically(true);
             webView.getSettings().setJavaScriptEnabled(true);
             webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
             webView.loadUrl(url);
+
         }
     }
         //for progressbar
@@ -135,4 +138,7 @@ public class WebActivity extends AppCompatActivity{
         }
 
     }
+
+
+
 }

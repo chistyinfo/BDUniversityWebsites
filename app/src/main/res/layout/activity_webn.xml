@@ -29,9 +29,10 @@
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/progressbar"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    //android:background="@drawable/progressbar"
     <WebView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -144,6 +144,10 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 fragment = new InternationalFragment();
                 title = getString(R.string.title_inter);
                 break;
+            case 7:
+                fragment = new InternationalFragment();
+                title = getString(R.string.title_developer);
+                break;
             default:
                 break;
         }

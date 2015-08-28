@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -126,11 +127,16 @@ public class NationalFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
-                Intent intent = new Intent(getActivity(), WebActivity.class);
-                intent.putExtra("uniName", uniName[position]);
-                intent.putExtra("url", urlStrArray[position]);
+                if(isNetworkAvailable()){
+                    Intent intent = new Intent(getActivity(), WebActivity.class);
+                    intent.putExtra("uniName", uniName[position]);
+                    intent.putExtra("url", urlStrArray[position]);
 
-                startActivity(intent);
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(context, "Please check your Internet Connection!", Toast.LENGTH_SHORT).show();
+                }
 
 
             }

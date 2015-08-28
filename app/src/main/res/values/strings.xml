@@ -12,6 +12,8 @@
     <string name="nav_item_private">Private University</string>
     <string name="nav_item_national">National University</string>
     <string name="nav_item_inter">International University</string>
+    <string name="nav_item_developer">Developer</string>
+
 
     <!-- navigation drawer item labels  -->
     <string-array name="nav_drawer_labels">
@@ -22,6 +24,8 @@
         <item>@string/nav_item_private</item>
         <item>@string/nav_item_national</item>
         <item>@string/nav_item_inter</item>
+        <item>@string/nav_item_developer</item>
+
     </string-array>
 
     <string name="title_home">BD University Websites</string>
@@ -31,6 +35,7 @@
     <string name="title_private">Private University</string>
     <string name="title_national">National University</string>
     <string name="title_inter">International University</string>
+    <string name="title_developer">Developer</string>
 
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 </resources>

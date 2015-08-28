@@ -17,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -103,11 +104,17 @@ public class PublicFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
-                Intent intent = new Intent(getActivity(), WebActivity.class);
-                intent.putExtra("uniName", uniName[position]);
-                intent.putExtra("url", urlStrArray[position]);
 
-                startActivity(intent);
+                if(isNetworkAvailable()){
+                    Intent intent = new Intent(getActivity(), WebActivity.class);
+                    intent.putExtra("uniName", uniName[position]);
+                    intent.putExtra("url", urlStrArray[position]);
+
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(context, "Please check your Internet Connection!", Toast.LENGTH_SHORT).show();
+                }
 
 
             }

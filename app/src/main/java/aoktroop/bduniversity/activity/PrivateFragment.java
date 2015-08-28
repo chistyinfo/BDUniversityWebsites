@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -27,7 +28,7 @@ public class PrivateFragment extends Fragment {
 
     private View view;
 
-    String[] itemName ={
+    String[] uniName ={
             "Ahsanullah University of Science and Technology (AUST)",
             "America Bangladesh University (ABU)",
             "American International University-Bangladesh (AIUB)",
@@ -76,7 +77,7 @@ public class PrivateFragment extends Fragment {
 
     };
 
-    String[] urlArray={
+    String[] urlStrArray={
             "http://www.aust.edu/",
             "http://www.abuniversity.edu.bd/",
             "http://www.aiub.edu/",
@@ -140,7 +141,7 @@ public class PrivateFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_private, container, false);
         CustomListAdapter adapter = new CustomListAdapter( getActivity()
-                ,itemName,null);
+                ,uniName,null);
         listViewUni=(ListView)rootView.findViewById(R.id.list_view_private_university);
         listViewUni.setAdapter(adapter);
 
@@ -152,11 +153,16 @@ public class PrivateFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
-                Intent intent = new Intent(getActivity(), WebActivity.class);
-                intent.putExtra("uniName", itemName[position]);
-                intent.putExtra("url", urlArray[position]);
+                if(isNetworkAvailable()){
+                    Intent intent = new Intent(getActivity(), WebActivity.class);
+                    intent.putExtra("uniName", uniName[position]);
+                    intent.putExtra("url", urlStrArray[position]);
 
-                startActivity(intent);
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(context, "Please check your Internet Connection!", Toast.LENGTH_SHORT).show();
+                }
 
 
             }
