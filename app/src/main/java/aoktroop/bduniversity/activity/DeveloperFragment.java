@@ -1,6 +1,8 @@
 package aoktroop.bduniversity.activity;
 
 import android.app.Activity;
+import android.content.DialogInterface;
+import android.media.Image;
 import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
@@ -37,8 +40,67 @@ public class DeveloperFragment extends Fragment  {
 
 
 
+        ImageView fbHasan = (ImageView) rootView.findViewById(R.id.hasan_fb);
+        ImageView fbSunny = (ImageView) rootView.findViewById(R.id.sunny_fb);
+        ImageView fbChisty = (ImageView) rootView.findViewById(R.id.chisty_fb);
+        ImageView fbSaimum = (ImageView) rootView.findViewById(R.id.saimum_fb);
+        fbHasan.setOnClickListener(FbListener);
+        fbSunny.setOnClickListener(FbListener);
+        fbChisty.setOnClickListener(FbListener);
+        fbSaimum.setOnClickListener(FbListener);
+
+        ImageView emHasan=(ImageView)rootView.findViewById(R.id.emailHasan);
+        ImageView emSunny=(ImageView)rootView.findViewById(R.id.sunny_email);
+        ImageView emChisty=(ImageView)rootView.findViewById(R.id.chisty_email);
+        ImageView emSaimum=(ImageView)rootView.findViewById(R.id.saimum_email);
+        ImageView emOakTroop=(ImageView)rootView.findViewById(R.id.emailOakTeam);
+
+         emHasan.setOnClickListener(eMailListenr);
+         emSunny.setOnClickListener(eMailListenr);
+         emChisty.setOnClickListener(eMailListenr);
+         emSaimum.setOnClickListener(eMailListenr);
+         emOakTroop.setOnClickListener(eMailListenr);
+
+        ImageView cAllDev=(ImageView)rootView.findViewById(R.id.calldeve);
+        cAllDev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callToDeveloper(v);
+            }
+        });
+
+        ImageView fbOak=(ImageView)rootView.findViewById(R.id.oak_team_fb);
+        fbOak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FacebookActionOak(v);
+            }
+        });
+
+        ImageView pLayStore=(ImageView)rootView.findViewById(R.id.play_store_id);
+        pLayStore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playStoreShow(v);
+            }
+        });
+
         return rootView;
     }
+    private View.OnClickListener FbListener= new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            FacebookAction(v);
+
+        }
+    };
+    private  View.OnClickListener eMailListenr= new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            emailAction(v);
+        }
+    };
+
 
     @Override
     public void onAttach(Activity activity) {
@@ -130,7 +192,7 @@ public class DeveloperFragment extends Fragment  {
     public void emailAction(View view){
         view.startAnimation(buttonClick);
 
-        Log.i("Send email", "");
+      // Log.i("Send email", "");
 //        String[] TO = {"hasan_cse91@yahoo.com","sunny_mhs@hotmail.com","chistyinfo@gmail.com","shakirahmed1996@gmail.com"};
         String[] CC = {""};
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
@@ -162,7 +224,7 @@ public class DeveloperFragment extends Fragment  {
 
 
         //emailIntent.putExtra(Intent.EXTRA_CC, CC);
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "About App of Ramadan");
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "BD University Website");
         emailIntent.putExtra(Intent.EXTRA_TEXT, "");
 
         try {

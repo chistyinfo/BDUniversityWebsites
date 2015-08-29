@@ -12,7 +12,7 @@
     <string name="nav_item_private">Private University</string>
     <string name="nav_item_national">National University</string>
     <string name="nav_item_inter">International University</string>
-    <string name="nav_item_developer">Developer</string>
+    <string name="nav_item_developer">About Developer</string>
 
 
     <!-- navigation drawer item labels  -->
@@ -35,7 +35,7 @@
     <string name="title_private">Private University</string>
     <string name="title_national">National University</string>
     <string name="title_inter">International University</string>
-    <string name="title_developer">Developer</string>
+    <string name="title_developer">About Developer</string>
 
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 
@@ -43,7 +43,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="company_name">The Oak Troop</string>
-    <string name="about_developer">আপনার প্রয়োজনীয় ও মানসম্পন্ন Android App ডেভেলপ করতে আমরা বদ্ধ পরিকর। ব্যক্তিগত বা প্রতিষ্ঠানের এপ্লিকেশন তৈরি করতে যোগাযোগ করুন।</string>
+    <!--<string name="about_developer">আপনার প্রয়োজনীয় ও মানসম্পন্ন Android App ডেভেলপ করতে আমরা বদ্ধ পরিকর। ব্যক্তিগত বা প্রতিষ্ঠানের এপ্লিকেশন তৈরি করতে যোগাযোগ করুন।</string>-->
     <string name="facebook_oak_team">ফেসবুকে The Oak Troop</string>
     <string name="facebook_note">Me on Facebook</string>
     <string name="mail_note">Mail me</string>

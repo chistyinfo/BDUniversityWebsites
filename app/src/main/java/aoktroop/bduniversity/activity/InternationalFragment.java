@@ -57,7 +57,7 @@ public class InternationalFragment extends Fragment {
                 ,uniName,null);
         listViewUni=(ListView)rootView.findViewById(R.id.list_view_others);
         listViewUni.setAdapter(adapter);
-      addVisibile(rootView);
+      //addVisibile(rootView);
         view=rootView;
 
         listViewUni.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -98,7 +98,7 @@ public class InternationalFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-        addVisibile(view);
+       // addVisibile(view);
     }
     private void addVisibile(View view) {
 

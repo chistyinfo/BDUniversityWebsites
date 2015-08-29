@@ -34,7 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
-                    android:text="@string/about_developer"
+                    android:text=""
                     android:id="@+id/about_developer" />
 
 
@@ -97,7 +97,7 @@
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:src="@drawable/ic_email"
-                                android:onClick="emailAction"
+
                                 android:id="@+id/emailHasan"
                                 />
 
@@ -105,7 +105,7 @@
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
                                 android:src="@drawable/ic_facebook"
-                                android:onClick="FacebookAction"
+
                                 android:id="@+id/hasan_fb"
                                 />
 
@@ -148,7 +148,7 @@
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:src="@drawable/ic_email"
-                                android:onClick="emailAction"
+
                                 android:id="@+id/sunny_email"
                                 />
 
@@ -156,7 +156,7 @@
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
                                 android:src="@drawable/ic_facebook"
-                                android:onClick="FacebookAction"
+
                                 android:id="@+id/sunny_fb"
                                 />
 
@@ -207,7 +207,6 @@
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:src="@drawable/ic_email"
-                                android:onClick="emailAction"
                                 android:id="@+id/chisty_email"
                                 />
 
@@ -215,7 +214,7 @@
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
                                 android:src="@drawable/ic_facebook"
-                                android:onClick="FacebookAction"
+
                                 android:id="@+id/chisty_fb"
                                 />
 
@@ -258,7 +257,7 @@
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:src="@drawable/ic_email"
-                                android:onClick="emailAction"
+
                                 android:id="@+id/saimum_email"
                                 />
 
@@ -266,7 +265,7 @@
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
                                 android:src="@drawable/ic_facebook"
-                                android:onClick="FacebookAction"
+
                                 android:id="@+id/saimum_fb"
                                 />
 
@@ -307,7 +306,7 @@
                             android:layout_width="0dp"
                             android:layout_height="20dp"
                             android:src="@drawable/ic_phone_call"
-                            android:onClick="callToDeveloper"
+                            android:id="@+id/calldeve"
                             android:layout_weight="1"
                             />
 
@@ -315,7 +314,7 @@
                             android:layout_width="0dp"
                             android:layout_height="30dp"
                             android:src="@drawable/ic_email"
-                            android:onClick="emailAction"
+
                             android:id="@+id/emailOakTeam"
                             android:layout_weight="1"
                             />
@@ -324,7 +323,7 @@
                             android:layout_width="0dp"
                             android:layout_height="25dp"
                             android:src="@drawable/ic_facebook"
-                            android:onClick="FacebookActionOak"
+
                             android:id="@+id/oak_team_fb"
                             android:layout_weight="1"
                             />
@@ -332,7 +331,7 @@
                             android:layout_width="0dp"
                             android:layout_height="40dp"
                             android:src="@drawable/play_store"
-                            android:onClick="playStoreShow"
+
                             android:id="@+id/play_store_id"
                             android:layout_gravity="center"
                             android:layout_weight="2"/>
