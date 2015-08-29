@@ -14,6 +14,10 @@
     <string name="nav_item_inter">International University</string>
     <string name="nav_item_developer">About Developer</string>
 
+    <string name="welcome_note">BD University Websites এ আপনাদের স্বাগতম!\n\n
+এপটির মাধ্যমে দেশের শীর্ষ স্থানীয় বিশ্ববিদ্যালয়গুলোর ওয়েবসাইট ব্রাউজ করা যাবে। একই সাথে বিশ্ববিদ্যালয়ে ভর্তি সংক্রান্ত সর্বশেষ নোটিশ পৌঁছে যাবে আপনার ফোনে।\n\n
+এপ সম্পর্কে আপনার মন্তব্য বা বাদ পড়ে যাওয়া কোন বিশ্ববিদ্যালয়ের তথ্য আমাদেরকে জানাতে Feedback অপশনটি ব্যাবহার করুন। ধন্যবাদ।</string>
+
 
     <!-- navigation drawer item labels  -->
     <string-array name="nav_drawer_labels">
