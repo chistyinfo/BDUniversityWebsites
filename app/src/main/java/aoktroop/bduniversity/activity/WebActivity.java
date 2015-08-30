@@ -131,6 +131,7 @@ public class WebActivity extends AppCompatActivity{
         if(webView.canGoForward())
         {
             webView.goForward();
+
         }
         else{
 //            System.out.println("2. Else!!!");

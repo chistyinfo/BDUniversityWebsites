@@ -43,22 +43,22 @@ public class DeveloperFragment extends Fragment  {
         ImageView fbHasan = (ImageView) rootView.findViewById(R.id.hasan_fb);
         ImageView fbSunny = (ImageView) rootView.findViewById(R.id.sunny_fb);
         ImageView fbChisty = (ImageView) rootView.findViewById(R.id.chisty_fb);
-        ImageView fbSaimum = (ImageView) rootView.findViewById(R.id.saimum_fb);
+
         fbHasan.setOnClickListener(FbListener);
         fbSunny.setOnClickListener(FbListener);
         fbChisty.setOnClickListener(FbListener);
-        fbSaimum.setOnClickListener(FbListener);
+
 
         ImageView emHasan=(ImageView)rootView.findViewById(R.id.emailHasan);
         ImageView emSunny=(ImageView)rootView.findViewById(R.id.sunny_email);
         ImageView emChisty=(ImageView)rootView.findViewById(R.id.chisty_email);
-        ImageView emSaimum=(ImageView)rootView.findViewById(R.id.saimum_email);
+
         ImageView emOakTroop=(ImageView)rootView.findViewById(R.id.emailOakTeam);
 
          emHasan.setOnClickListener(eMailListenr);
          emSunny.setOnClickListener(eMailListenr);
          emChisty.setOnClickListener(eMailListenr);
-         emSaimum.setOnClickListener(eMailListenr);
+
          emOakTroop.setOnClickListener(eMailListenr);
 
         ImageView cAllDev=(ImageView)rootView.findViewById(R.id.calldeve);
@@ -66,6 +66,15 @@ public class DeveloperFragment extends Fragment  {
             @Override
             public void onClick(View v) {
                 callToDeveloper(v);
+            }
+        });
+
+
+        ImageView serverOak=(ImageView)rootView.findViewById(R.id.serverOakTeam);
+        serverOak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                WebActionOak(v);
             }
         });
 
@@ -114,7 +123,21 @@ public class DeveloperFragment extends Fragment  {
         super.onDetach();
     }
 
+    public void WebActionOak(View view){
+        view.startAnimation(buttonClick);
+        try{
+            Intent webIntent=new Intent(Intent.ACTION_VIEW);
+            String Url = null;
+            Url = getString(R.string.title_team_server);
+            webIntent.setData(Uri.parse(Url));
+            startActivity(webIntent);
+        }
+        catch (Exception e){
+            Toast.makeText(context, "Something wrong!", Toast.LENGTH_SHORT).show();
 
+        }
+
+    }
     public void callToDeveloper(View view){
         view.startAnimation(buttonClick);
 
@@ -171,9 +194,7 @@ public class DeveloperFragment extends Fragment  {
                 case R.id.chisty_fb:
                     Url=getString(R.string.title_chisty_fb);
                     break;
-                case R.id.saimum_fb:
-                    Url=getString(R.string.title_saimum_fb);
-                    break;
+
 
             }
             Intent webIntent=new Intent(Intent.ACTION_VIEW);
@@ -211,10 +232,6 @@ public class DeveloperFragment extends Fragment  {
         }
         else if(view.getId()==R.id.chisty_email){
             String[] TO = {"chistyinfo@gmail.com"};
-            emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
-        }
-        else if(view.getId()==R.id.saimum_email){
-            String[] TO = {"shakirahmed1996@gmail.com"};
             emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
         }
         else if(view.getId()==R.id.emailOakTeam){

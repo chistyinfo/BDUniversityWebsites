@@ -27,6 +27,8 @@ public class EngineeringFragment extends Fragment {
 
     private Context context;
     private View view;
+    private int someStateValue;
+    private final String SOME_VALUE_KEY = "someValueToSave";
 
     String[] uniName ={
             "Bangabandhu Sheikh Mujibur Rahman Science and Technology University",
@@ -74,6 +76,7 @@ public class EngineeringFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        savedInstanceState.putInt(SOME_VALUE_KEY,someStateValue);
 
     }
 
@@ -81,6 +84,10 @@ public class EngineeringFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_engineering, container, false);
+//        if(savedInstanceState!=null)
+//        {
+//            someStateValue=savedInstanceState.getInt(SOME_VALUE_KEY);
+//        }
         CustomListAdapter adapter = new CustomListAdapter( getActivity()
                 ,uniName,null);
         listViewUni=(ListView)rootView.findViewById(R.id.list_view_engineering);
