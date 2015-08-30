@@ -64,5 +64,8 @@
     <string name="mail_hasan">"hasan_cse91@yahoo.com"</string>
     <string name="mail_sunny">"sunny_mhs@hotmail.com"</string>
     <string name="mail_chisty">"chistyinfo@gmail.com"</string>
+    <string name="title_activity_feedback">Feedback</string>
+
+    <string name="hello_world">Hello world!</string>
 
 </resources>

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="oaktroop.bduniversity" >
-
-
     //Copy these form rezlt
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <permission
         android:name="oaktroop.bduniversity.permission.C2D_MESSAGE"
@@ -19,10 +16,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-
     //................................
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -37,7 +31,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         //..........rzlts.............................
         <activity
             android:name="com.rzlts.appinbox.InboxActivity"
@@ -51,9 +44,9 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
-        <activity
-            android:name="com.rzlts.appinbox.NotificationActivity" >
+        <activity android:name="com.rzlts.appinbox.NotificationActivity" >
         </activity>
+
         <receiver
             android:name="com.rzlts.appinbox.service.GCMReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
@@ -67,19 +60,21 @@
 
         <service android:name="com.rzlts.appinbox.service.GCMIntentService" />
 
-        <!--This meta-data tag is required to use Google Play Services.-->
-        <meta-data android:name="com.google.android.gms.version"
+        <!-- This meta-data tag is required to use Google Play Services. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <!--Include the AdActivity configChanges and theme. -->
-        <activity android:name="com.google.android.gms.ads.AdActivity"
+        <!-- Include the AdActivity configChanges and theme. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />
-
-    <activity android:name="aoktroop.bduniversity.activity.WebActivity"></activity>
-
-
-
+        <activity android:name="aoktroop.bduniversity.activity.WebActivity" />
+        <activity
+            android:name=".FeedbackActivity"
+            android:label="@string/title_activity_feedback" >
+        </activity>
     </application>
 
 </manifest>
