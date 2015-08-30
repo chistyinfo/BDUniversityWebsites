@@ -1,9 +1,6 @@
 package aoktroop.bduniversity.activity;
 
-import android.content.Context;
 import android.graphics.Bitmap;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -131,7 +128,6 @@ public class WebActivity extends AppCompatActivity{
         if(webView.canGoForward())
         {
             webView.goForward();
-
         }
         else{
 //            System.out.println("2. Else!!!");
