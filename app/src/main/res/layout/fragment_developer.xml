@@ -1,10 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="fill_parent"
     android:orientation="vertical"
     tools:context="aoktroop.bduniversity.activity.DeveloperFragment"
-    >
+    android:background="#c7fabd">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -53,7 +53,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
                     android:weightSum="2">
 
                     <LinearLayout
@@ -119,6 +118,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="right"
                             android:text="Mahadi Hasan"
                             android:textSize="17sp"
                             android:textStyle="bold"
@@ -126,11 +126,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="right"
                             android:text="@string/designation"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="right"
                             android:orientation="horizontal"
                             >
 
@@ -180,16 +182,19 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Mainuddin Chisty"
+                            android:layout_gravity="center"
                             android:textSize="17sp"
                             android:textStyle="bold"
                             android:textColor="#104E8B"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:text="@string/designation"/>
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:orientation="horizontal"
                             >
 
