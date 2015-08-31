@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -165,6 +166,22 @@ public class PrivateFragment extends Fragment {
                 }
 
 
+            }
+        });
+        listViewUni.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                try {
+                    Intent webIntent = new Intent(Intent.ACTION_VIEW);
+                    String Url = null;
+                    Url = urlStrArray[position];
+                    webIntent.setData(Uri.parse(Url));
+                    startActivity(webIntent);
+                } catch (Exception e) {
+                    Toast.makeText(context, "Something wrong!", Toast.LENGTH_SHORT).show();
+
+                }
+                return true;
             }
         });
         return rootView;
