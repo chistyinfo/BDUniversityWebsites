@@ -35,7 +35,7 @@ public class PostMethod extends AsyncTask<String,Void,String> {
     protected String doInBackground(String... arg0) {
 
         String packageName = "oaktroop.bduniversity";
-        String link = "http://apitest.oaktroop.com/api/v1/test"; //API link
+        String link = "http://apitest.oaktroop.com/api/v1/feedback"; //API link
 
         HttpClient httpClient = new DefaultHttpClient();
         HttpPost httpPost = new HttpPost(link);
@@ -63,7 +63,7 @@ public class PostMethod extends AsyncTask<String,Void,String> {
             BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
 
             while ((line = rd.readLine()) != null) {
-                System.out.println("gha hghghgha aa: " + line);
+//                System.out.println("gha hghghgha aa: " + line);
                 break;
             }
 

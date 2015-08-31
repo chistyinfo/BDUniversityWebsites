@@ -48,16 +48,22 @@ public class FeedbackActivity extends AppCompatActivity implements MyInterface {
             @Override
             public void onClick(View view) {
 
-                nameString = name.getText().toString();
-                emailString = email.getText().toString();
-                phoneString = phone.getText().toString();
-                feedbackString = feedbackEditText.getText().toString();
+                if(isNetworkAvailable()){
 
-                if(!feedbackString.isEmpty()){
-                    postMethod.execute(nameString,emailString,phoneString,feedbackString);
+                    nameString = name.getText().toString();
+                    emailString = email.getText().toString();
+                    phoneString = phone.getText().toString();
+                    feedbackString = feedbackEditText.getText().toString();
+
+                    if(!feedbackString.isEmpty()){
+                        postMethod.execute(nameString,emailString,phoneString,feedbackString);
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(),"You must give feedback!", Toast.LENGTH_SHORT).show();
+                    }
                 }
-                else {
-                    Toast.makeText(getApplicationContext(),"You must give feedback!", Toast.LENGTH_SHORT).show();
+                else{
+                    Toast.makeText(getApplicationContext(),"Please check your Internet connection", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -106,8 +112,16 @@ public class FeedbackActivity extends AppCompatActivity implements MyInterface {
             e.printStackTrace();
         }
 
-//        responseTextView.setText(message);
+        Integer feedbackNum = Integer.parseInt(message);
 
+        if(feedbackNum!=null && feedbackNum>0){
+            Toast.makeText(getApplicationContext(),"Thank you for your feedback!", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(getApplicationContext(),"Something wrong! Please mail us from Developer page!", Toast.LENGTH_SHORT).show();
+        }
+
+        finish();
     }
 
 }
