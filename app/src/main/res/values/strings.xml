@@ -5,7 +5,7 @@
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
 
-    <string name="nav_item_home">BD University Websites</string>
+    <string name="nav_item_home">Home</string>
     <string name="nav_item_engin">Engineering University</string>
     <string name="nav_item_medical">Medical College</string>
     <string name="nav_item_public">Public University</string>
@@ -32,7 +32,7 @@
 
     </string-array>
 
-    <string name="title_home">BD University Websites</string>
+    <string name="title_home">Home</string>
     <string name="title_engin">Engineering University</string>
     <string name="title_medical">Medical College</string>
     <string name="title_public">Public University</string>
