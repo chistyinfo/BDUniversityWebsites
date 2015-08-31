@@ -61,6 +61,12 @@ public class WebActivity extends AppCompatActivity{
 
         }
     }
+
+      public void Backbt(View v)
+      {
+          finish();
+      }
+
         //for progressbar
         public class myWebClient extends WebViewClient
         {
