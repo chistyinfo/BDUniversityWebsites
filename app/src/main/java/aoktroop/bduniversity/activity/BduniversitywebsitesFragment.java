@@ -11,6 +11,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 
 import oaktroop.bduniversity.FeedbackActivity;
@@ -20,6 +21,7 @@ import oaktroop.bduniversity.R;
 public class BduniversitywebsitesFragment extends Fragment {
 
     ImageView button;
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.002F);
 
     public BduniversitywebsitesFragment() {
         // Required empty public constructor
@@ -43,6 +45,7 @@ public class BduniversitywebsitesFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                view.startAnimation(buttonClick);
                 Intent intent = new Intent(getActivity(), FeedbackActivity.class);
                 startActivity(intent);
             }

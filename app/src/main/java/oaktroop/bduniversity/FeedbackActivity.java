@@ -6,6 +6,7 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -32,6 +33,7 @@ public class FeedbackActivity extends AppCompatActivity implements MyInterface {
     String phoneString;
     String feedbackString;
     PostMethod postMethod = new PostMethod(this);
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.002F);
     String strJson;
     String data;
 
