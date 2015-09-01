@@ -80,6 +80,11 @@ public class FeedbackActivity extends AppCompatActivity implements MyInterface {
         feedbackEditText = (EditText) findViewById(R.id.feedback);
     }
 
+    public void backButtonAction(View view){
+        view.startAnimation(buttonClick);
+        finish();
+    }
+
     private void addVisibile() {
 
         LinearLayout adLinearLayout=(LinearLayout)findViewById(R.id.adMainActivity);
@@ -125,5 +130,6 @@ public class FeedbackActivity extends AppCompatActivity implements MyInterface {
 
         finish();
     }
+
 
 }

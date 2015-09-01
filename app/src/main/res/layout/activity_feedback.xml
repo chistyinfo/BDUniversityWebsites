@@ -7,15 +7,33 @@
     android:background="#e8e8e7"
     tools:context="oaktroop.bduniversity.FeedbackActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:orientation="horizontal"
         android:background="@color/colorPrimary"
-        android:text="Feedback"
-        android:textColor="#FFFF"
-        android:textSize="25sp"
-        android:gravity="center"
-        />
+        android:weightSum="7"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/back"
+            android:clickable="true"
+            android:onClick="backButtonAction"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="match_parent"
+            android:text="Give your Feedback   "
+            android:textColor="#FFFF"
+            android:textSize="22sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="0dp"
