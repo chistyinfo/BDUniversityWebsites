@@ -12,7 +12,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+
+import com.rzlts.appinbox.AppInbox;
+import com.rzlts.appinbox.model.Gender;
+import com.rzlts.appinbox.views.InboxView;
 
 import oaktroop.bduniversity.FeedbackActivity;
 import oaktroop.bduniversity.R;
@@ -39,6 +44,14 @@ public class BduniversitywebsitesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_bduniversitywebsites, container, false);
+
+
+        AppInbox.startInbox(getActivity(), "c1mkKqWWNaPSzE0e9GIHkgAyD0fvlslXZeosmJTmg2E", "89485377970", null, null, null, "Oak", "Troop", "oaktroop2015@gmail.com", Gender.MALE, 0);
+
+
+        FrameLayout rlLayout = (FrameLayout) rootView.findViewById(R.id.rlLayout);
+        final InboxView inbox = new InboxView(getActivity());
+        rlLayout.addView(inbox);
 
         button = (ImageView) rootView.findViewById(R.id.feedbackButton);
 

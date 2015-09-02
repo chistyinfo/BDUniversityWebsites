@@ -9,17 +9,12 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.rzlts.appinbox.AppInbox;
 import com.rzlts.appinbox.model.Gender;
-import com.rzlts.appinbox.views.InboxView;
 
 import oaktroop.bduniversity.R;
 
@@ -47,9 +42,9 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
         AppInbox.startInbox(this, "c1mkKqWWNaPSzE0e9GIHkgAyD0fvlslXZeosmJTmg2E", "89485377970", null, null, null, "Oak", "Troop", "oaktroop2015@gmail.com", Gender.MALE, 0);
 
-        FrameLayout rlLayout = (FrameLayout) this.findViewById(R.id.rlLayout);
-        final InboxView inbox = new InboxView(this);
-        rlLayout.addView(inbox);
+//        FrameLayout rlLayout = (FrameLayout) this.findViewById(R.id.rlLayout);
+//        final InboxView inbox = new InboxView(this);
+//        rlLayout.addView(inbox);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 

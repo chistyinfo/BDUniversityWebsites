@@ -27,11 +27,11 @@
         </LinearLayout>
 
 
-        <FrameLayout
-            android:id="@+id/rlLayout"
-            android:layout_width="fill_parent"
-            android:layout_height="20dp"
-            android:layout_weight="0.76" />
+        <!--<FrameLayout-->
+            <!--android:id="@+id/rlLayout"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:layout_weight="0.76" />-->
 
 
         <!--<android.support.design.widget.FloatingActionButton-->
