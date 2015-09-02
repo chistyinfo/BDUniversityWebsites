@@ -80,7 +80,7 @@ public class NationalFragment extends Fragment {
             "http://www.dhakacollege.edu.bd/",
             "http://www.dcc.edu.bd/",
             "http://www.dgc.edu.bd/",
-            "http://www.edenmohilacollege.com/",
+            "http://www.emc.edu.bd/college_history.php/",
             "http://www.fgc.gov.bd/",
             "http://www.ctgcommercecollege.gov.bd/",
             "http://www.mohsincollege.gov.bd/",
