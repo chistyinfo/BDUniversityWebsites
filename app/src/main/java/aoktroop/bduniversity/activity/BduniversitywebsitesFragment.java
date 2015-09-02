@@ -15,6 +15,8 @@ import android.view.animation.AlphaAnimation;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.rzlts.appinbox.AppInbox;
 import com.rzlts.appinbox.model.Gender;
 import com.rzlts.appinbox.views.InboxView;
@@ -44,6 +46,13 @@ public class BduniversitywebsitesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_bduniversitywebsites, container, false);
+
+
+
+        AdView mAdView = (AdView) rootView.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
 
         AppInbox.startInbox(getActivity(), "c1mkKqWWNaPSzE0e9GIHkgAyD0fvlslXZeosmJTmg2E", "89485377970", null, null, null, "Oak", "Troop", "oaktroop2015@gmail.com", Gender.MALE, 0);
