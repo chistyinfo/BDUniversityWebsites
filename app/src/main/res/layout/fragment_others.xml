@@ -23,7 +23,7 @@ tools:context="aoktroop.bduniversity.activity.InternationalFragment">
     android:layout_height="match_parent">
     <ListView
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_height="250dp"
         android:id="@+id/list_view_others"
 
         android:dividerHeight="5dp"
@@ -39,6 +39,7 @@ tools:context="aoktroop.bduniversity.activity.InternationalFragment">
     android:layout_height="wrap_content"
 
     android:id="@+id/adLaInt"
+    android:layout_gravity="bottom"
     android:gravity="center">
     <com.google.android.gms.ads.AdView
         android:id="@+id/adViewInt"

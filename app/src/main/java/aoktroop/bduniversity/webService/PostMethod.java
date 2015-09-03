@@ -1,4 +1,4 @@
-package aoktroop.bduniversity;
+package aoktroop.bduniversity.webService;
 
 import android.content.Context;
 import android.os.AsyncTask;

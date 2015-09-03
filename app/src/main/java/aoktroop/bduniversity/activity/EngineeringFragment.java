@@ -1,7 +1,9 @@
 package aoktroop.bduniversity.activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -151,6 +153,7 @@ public class EngineeringFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
+
     }
 
     @Override
@@ -177,5 +180,6 @@ public class EngineeringFragment extends Fragment {
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
+
 
 }

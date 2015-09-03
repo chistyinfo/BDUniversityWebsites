@@ -18,8 +18,8 @@ import com.google.android.gms.ads.AdView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import aoktroop.bduniversity.MyInterface;
-import aoktroop.bduniversity.PostMethod;
+import aoktroop.bduniversity.webService.MyInterface;
+import aoktroop.bduniversity.webService.PostMethod;
 
 public class FeedbackActivity extends AppCompatActivity implements MyInterface {
 

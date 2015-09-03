@@ -41,7 +41,7 @@ public class WebActivity extends AppCompatActivity{
 
 
         webView = (WebView) findViewById(R.id.webView);
-        txtUnititle = (TextView) findViewById(R.id.title_uniName);
+       // txtUnititle = (TextView) findViewById(R.id.title_uniName);
 
 
         Bundle extras = getIntent().getExtras();
@@ -50,11 +50,12 @@ public class WebActivity extends AppCompatActivity{
             uniName = extras.getString("uniName");
             url = extras.getString("url");
 
-            txtUnititle.setText(uniName);
-            txtUnititle.setMovementMethod(new ScrollingMovementMethod());
+           // txtUnititle.setText(uniName);
+           // txtUnititle.setMovementMethod(new ScrollingMovementMethod());
 
             webView.setWebViewClient(new MyBrowser());
             webView.getSettings().setLoadsImagesAutomatically(true);
+            webView.getSettings().setBuiltInZoomControls(true);
             webView.getSettings().setJavaScriptEnabled(true);
             webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
             webView.loadUrl(url);
