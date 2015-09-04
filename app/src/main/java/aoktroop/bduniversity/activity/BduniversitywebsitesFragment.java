@@ -15,6 +15,8 @@ import android.view.animation.AlphaAnimation;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.rzlts.appinbox.AppInbox;
 import com.rzlts.appinbox.model.Gender;
 import com.rzlts.appinbox.views.InboxView;
@@ -47,9 +49,9 @@ public class BduniversitywebsitesFragment extends Fragment {
 
 
 
-//        AdView mAdView = (AdView) rootView.findViewById(R.id.adView);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
+        AdView mAdView = (AdView) rootView.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
 
 

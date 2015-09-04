@@ -2,6 +2,7 @@ package aoktroop.bduniversity.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -81,6 +82,7 @@ public class EngineeringFragment extends Fragment {
         super.onCreate(savedInstanceState);
 //        savedInstanceState.putInt(SOME_VALUE_KEY,someStateValue);
 
+
     }
 
     @Override
@@ -154,12 +156,16 @@ public class EngineeringFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
 
+
     }
+
+
 
     @Override
     public void onPause() {
         super.onPause();
         addVisibile(view);
+
     }
     private void addVisibile(View view) {
 
