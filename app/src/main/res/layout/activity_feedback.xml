@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#e8e8e7"
-    tools:context="oaktroop.bduniversity.FeedbackActivity">
+    tools:context="aoktroop.bduniversity.activity.FeedbackActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

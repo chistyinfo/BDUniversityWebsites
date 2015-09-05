@@ -79,7 +79,7 @@
             android:configChanges="orientation|screenSize|keyboardHidden"
             />
         <activity
-            android:name=".FeedbackActivity"
+            android:name="aoktroop.bduniversity.activity.FeedbackActivity"
             android:label="@string/title_activity_feedback"
             android:windowSoftInputMode="stateHidden"
             android:configChanges="orientation|screenSize|keyboardHidden"

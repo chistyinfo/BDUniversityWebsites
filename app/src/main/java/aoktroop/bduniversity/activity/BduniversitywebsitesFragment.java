@@ -21,7 +21,6 @@ import com.rzlts.appinbox.AppInbox;
 import com.rzlts.appinbox.model.Gender;
 import com.rzlts.appinbox.views.InboxView;
 
-import oaktroop.bduniversity.FeedbackActivity;
 import oaktroop.bduniversity.R;
 
 

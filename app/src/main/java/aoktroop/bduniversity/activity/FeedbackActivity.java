@@ -1,4 +1,4 @@
-package oaktroop.bduniversity;
+package aoktroop.bduniversity.activity;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -20,6 +20,7 @@ import org.json.JSONObject;
 
 import aoktroop.bduniversity.webService.MyInterface;
 import aoktroop.bduniversity.webService.PostMethod;
+import oaktroop.bduniversity.R;
 
 public class FeedbackActivity extends AppCompatActivity implements MyInterface {
 
