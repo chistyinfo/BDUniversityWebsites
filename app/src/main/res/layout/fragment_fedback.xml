@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="aoktroop.bduniversity.activity.FeedbackActivity"
+    >
+
+        <TextView
+            android:id="@+id/tst1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="আপনার মুলবান্ বান মতামত বা উপদেশ আমাদের চলার পথকে আরো বেগবান করবে"
+            android:textSize="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"/>
+
+
+
+
+    <Space
+        android:id="@+id/sp1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/tst1"
+        />
+
+
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sp1"
+            android:id="@+id/feedbackButton"
+            android:layout_gravity="center"
+            android:text="Feedback"
+            android:src="@drawable/fed"
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+
+</RelativeLayout>

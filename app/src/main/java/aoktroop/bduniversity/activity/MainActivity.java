@@ -138,6 +138,10 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 fragment = new DeveloperFragment();
                 title = getString(R.string.title_developer);
                 break;
+            case 8:
+                fragment = new FeedbackFragment();
+                title = getString(R.string.title_fedback);
+                break;
             default:
                 break;
         }

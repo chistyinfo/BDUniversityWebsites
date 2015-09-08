@@ -5,7 +5,6 @@ package aoktroop.bduniversity.activity;
  */
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -61,16 +60,16 @@ public class BduniversitywebsitesFragment extends Fragment {
         final InboxView inbox = new InboxView(getActivity());
         rlLayout.addView(inbox);
 
-        button = (ImageView) rootView.findViewById(R.id.feedbackButton);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                view.startAnimation(buttonClick);
-                Intent intent = new Intent(getActivity(), FeedbackActivity.class);
-                startActivity(intent);
-            }
-        });
+//        button = (ImageView) rootView.findViewById(R.id.feedbackButton);
+//
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                view.startAnimation(buttonClick);
+//                Intent intent = new Intent(getActivity(), FeedbackActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         // Inflate the layout for this fragment
         return rootView;
